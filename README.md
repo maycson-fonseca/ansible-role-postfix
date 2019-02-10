@@ -18,6 +18,8 @@ An [Ansible](https://www.ansible.com) role to install/configure [Postfix]
 
 ## Build Status
 
+[![Build Status](https://travis-ci.org/maycson-fonseca-procoding/ansible-role-postfix.svg?branch=master)[https://travis-ci.org/maycson-fonseca-procoding/ansible-role-postfix]
+
 ## Role Variables
 
 [Role Defaults](./defaults/main.yml)
