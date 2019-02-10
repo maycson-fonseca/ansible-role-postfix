@@ -1,0 +1,7 @@
+---
+
+- name: Install dependencies
+  include_tasks: "os_family/{{ ansible_os_family }}.yml"
+
+- name: configure postfix
+  include_tasks: configure.yml

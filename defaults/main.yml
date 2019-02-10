@@ -1,0 +1,51 @@
+---
+
+postfix_alias_database: "hash:/etc/aliases"
+postfix_alias_maps: "hash:/etc/aliases"
+
+postfix_header_size_limit: "4096000"
+
+postfix_mydestination: "$myhostname, localhost"
+postfix_mynetworks: "127.0.0.0/8, [::ffff:127.0.0.0]/104, [::1]/128"
+postfix_myorigin: "/etc/mailname"
+
+postfix_use_custom_mailname: "False"
+postfix_custom_mailname: "localhost.net"
+
+postfix_recipient_delimiter: "+"
+
+postfix_relayhost: "[smtp.localhost.net]:587"
+
+postfix_use_sasl_passwd_file: "False"
+postfix_sasl_username: "root"
+postfix_sasl_password: "password"
+
+postfix_smtpd_tls_auth_only: "yes"
+postfix_smtpd_tls_cert_file: "/etc/ssl/certs/ssl-cert-snakeoil.pem"
+postfix_smtpd_tls_ciphers: "high"
+postfix_smtpd_tls_exclude_ciphers: "EXP, MEDIUM, LOW, DES, 3DES, SSLv2"
+postfix_smtpd_tls_key_file: "/etc/ssl/private/ssl-cert-snakeoil.key"
+postfix_smtpd_tls_loglevel: "1"
+postfix_smtpd_tls_mandatory_protocols: "!SSLv2, !SSLv3, !TLSv1, !TLSv1.1"
+postfix_smtpd_tls_protocols: "!SSLv2, !SSLv3, !TLSv1, !TLSv1.1"
+postfix_smtpd_tls_security_level: "encrypt"
+postfix_smtpd_tls_session_cache_timeout: "3600s"
+postfix_smtpd_use_tls: "yes"
+
+postfix_smtp_sasl_auth_enable: "yes"
+postfix_smtp_sasl_password_maps: "hash:/etc/postfix/sasl_passwd"
+postfix_smtp_sasl_security_options: "noanonymous"
+postfix_smtp_sasl_tls_security_options: "noanonymous"
+postfix_smtp_tls_ciphers: "high"
+postfix_smtp_tls_exclude_ciphers: "EXP, MEDIUM, LOW, DES, 3DES, SSLv2"
+postfix_smtp_tls_mandatory_protocols: "!SSLv2, !SSLv3, !TLSv1, !TLSv1.1"
+postfix_smtp_tls_note_starttls_offer: "yes"
+postfix_smtp_tls_protocols: "!SSLv2, !SSLv3, !TLSv1, !TLSv1"
+postfix_smtp_tls_security_level: "encrypt"
+postfix_smtp_use_tls: "yes"
+
+postfix_tls_high_cipherlist: "kEECDH:+kEECDH+SHA:kEDH:+kEDH+SHA:+kEDH+CAMELLIA:kECDH:+kECDH+SHA:kRSA:+kRSA+SHA:+kRSA+CAMELLIA:!aNULL:!eNULL:!SSLv2:!RC4:!MD5:!DES:!EXP:!SEED:!IDEA:!3DES:!SHA"
+postfix_tls_medium_cipherlist: "kEECDH:+kEECDH+SHA:kEDH:+kEDH+SHA:+kEDH+CAMELLIA:kECDH:+kECDH+SHA:kRSA:+kRSA+SHA:+kRSA+CAMELLIA:!aNULL:!eNULL:!SSLv2:!MD5:!DES:!EXP:!SEED:!IDEA:!3DES"
+postfix_tls_random_source: "dev:/dev/urandom"
+
+postfix_unknown_local_recipient_reject_code: "550"

@@ -1,0 +1,9 @@
+---
+
+- name: install postfix
+  apt:
+    name:
+      - postfix
+      - libsasl2-modules
+    state: present
+  when: ansible_os_family == 'Debian'

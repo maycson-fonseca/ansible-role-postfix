@@ -1,0 +1,5 @@
+{% if postfix_use_custom_mailname == "True" %}
+{{ postfix_custom_mailname }}
+{% else %}
+{{ ansible_hostname }}
+{% endif %}

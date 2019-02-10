@@ -1,0 +1,17 @@
+---
+
+- name: postmap sasl_passwd
+  command: "postmap /etc/postfix/sasl_passwd"
+
+- name: enable postfix
+  systemd:
+    enabled: yes
+    state: restarted
+    daemon_reload: yes
+    name: postfix
+  when: ansible_service_mgr == "systemd"
+
+- name: restart postfix
+  service:
+    state: restarted
+    name: postfix

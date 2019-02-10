@@ -1,0 +1,7 @@
+---
+
+- name: Postfix
+  hosts: postfix
+
+  roles:
+    - ansible-role-postfix

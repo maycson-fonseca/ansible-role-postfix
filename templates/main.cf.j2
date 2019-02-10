@@ -1,0 +1,112 @@
+# {{ ansible_managed }}
+
+{% if postfix_alias_database is defined %}
+alias_database = {{ postfix_alias_database }}
+{% endif %}
+{% if postfix_alias_maps is defined %}
+alias_maps = {{ postfix_alias_maps }}
+{% endif %}
+
+{% if postfix_header_size_limit is defined %}
+header_size_limit = {{ postfix_header_size_limit }}
+{% endif %}
+
+{% if postfix_mydestination is defined %}
+mydestination = {{ postfix_mydestination }}
+{% endif %}
+{% if postfix_mynetworks is defined %}
+mynetworks = {{ postfix_mynetworks }}
+{% endif %}
+{% if postfix_myorigin is defined %}
+myorigin = {{ postfix_myorigin }}
+{% endif %}
+
+{% if postfix_recipient_delimiter is defined %}
+recipient_delimiter = {{ postfix_recipient_delimiter }}
+{% endif %}
+
+{% if postfix_relayhost is defined %}
+relayhost = {{ postfix_relayhost }}
+{% endif %}
+
+{% if postfix_smtpd_tls_auth_only is defined %}
+smtpd_tls_auth_only = {{ postfix_smtpd_tls_auth_only }}
+{% endif %}
+{% if postfix_smtpd_tls_cert_file is defined %}
+smtpd_tls_cert_file = {{ postfix_smtpd_tls_cert_file }}
+{% endif %}
+{% if postfix_smtpd_tls_ciphers is defined %}
+smtpd_tls_ciphers = {{ postfix_smtpd_tls_ciphers }}
+{% endif %}
+{% if postfix_smtpd_tls_exclude_ciphers is defined %}
+smtpd_tls_exclude_ciphers = {{ postfix_smtpd_tls_exclude_ciphers }}
+{% endif %}
+{% if postfix_smtpd_tls_key_file is defined %}
+smtpd_tls_key_file = {{ postfix_smtpd_tls_key_file }}
+{% endif %}
+{% if postfix_smtpd_tls_loglevel is defined %}
+smtpd_tls_loglevel = {{ postfix_smtpd_tls_loglevel }}
+{% endif %}
+{% if postfix_smtpd_tls_mandatory_protocols is defined %}
+smtpd_tls_mandatory_protocols = {{ postfix_smtpd_tls_mandatory_protocols }}
+{% endif %}
+{% if postfix_smtpd_tls_protocols is defined %}
+smtpd_tls_protocols = {{ postfix_smtpd_tls_protocols }}
+{% endif %}
+{% if postfix_smtpd_tls_security_level is defined %}
+smtpd_tls_security_level = {{ postfix_smtpd_tls_security_level }}
+{% endif %}
+{% if postfix_smtpd_tls_session_cache_timeout is defined %}
+smtpd_tls_session_cache_timeout = {{ postfix_smtpd_tls_session_cache_timeout }}
+{% endif %}
+{% if postfix_smtpd_use_tls is defined %}
+smtpd_use_tls = {{ postfix_smtpd_use_tls }}
+{% endif %}
+
+{% if postfix_smtp_sasl_auth_enable is defined %}
+smtp_sasl_auth_enable = {{ postfix_smtp_sasl_auth_enable }}
+{% endif %}
+{% if postfix_smtp_sasl_password_maps is defined %}
+smtp_sasl_password_maps = {{ postfix_smtp_sasl_password_maps }}
+{% endif %}
+{% if postfix_smtp_sasl_security_options is defined %}
+smtp_sasl_security_options = {{ postfix_smtp_sasl_security_options }}
+{% endif %}
+{% if postfix_smtp_sasl_tls_security_options is defined %}
+smtp_sasl_tls_security_options = {{ postfix_smtp_sasl_tls_security_options }}
+{% endif %}
+{% if postfix_smtp_tls_ciphers is defined %}
+smtp_tls_ciphers = {{ postfix_smtp_tls_ciphers }}
+{% endif %}
+{% if postfix_smtp_tls_exclude_ciphers is defined %}
+smtp_tls_exclude_ciphers = {{ postfix_smtp_tls_exclude_ciphers }}
+{% endif %}
+{% if postfix_smtp_tls_mandatory_protocols is defined %}
+smtp_tls_mandatory_protocols = {{ postfix_smtp_tls_mandatory_protocols }}
+{% endif %}
+{% if postfix_smtp_tls_note_starttls_offer is defined %}
+smtp_tls_note_starttls_offer = {{ postfix_smtp_tls_note_starttls_offer }}
+{% endif %}
+{% if postfix_smtp_tls_protocols is defined %}
+smtp_tls_protocols = {{ postfix_smtp_tls_protocols }}
+{% endif %}
+{% if postfix_smtp_tls_security_level is defined %}
+smtp_tls_security_level = {{ postfix_smtp_tls_security_level }}
+{% endif %}
+{% if postfix_smtp_use_tls is defined %}
+smtp_use_tls = {{ postfix_smtp_use_tls }}
+{% endif %}
+
+{% if postfix_tls_high_cipherlist is defined %}
+tls_high_cipherlist = {{ postfix_tls_high_cipherlist }}
+{% endif %}
+{% if postfix_tls_medium_cipherlist is defined %}
+tls_medium_cipherlist = {{ postfix_tls_medium_cipherlist }}
+{% endif %}
+{% if postfix_tls_random_source is defined %}
+tls_random_source = {{ postfix_tls_random_source }}
+{% endif %}
+
+{% if postfix_unknown_local_recipient_reject_code is defined %}
+unknown_local_recipient_reject_code = {{ postfix_unknown_local_recipient_reject_code }}
+{% endif %}

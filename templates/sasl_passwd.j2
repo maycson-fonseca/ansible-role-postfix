@@ -1,0 +1,3 @@
+{% if postfix_use_sasl_passwd_file == "True" %}
+{{ postfix_relayhost }} {{ postfix_sasl_username }}:{{ postfix_sasl_password }}
+{% endif %}

@@ -1,0 +1,27 @@
+---
+
+galaxy_info:
+  author: Maycson Fonseca <maycson.fonseca@procoding.com.br>
+  description: Role Ansible Postfix
+  company: "Pro Coding"
+  license: BSD
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - centos
+    - debian
+    - ubuntu
+    - postfix
+
+dependencies: []

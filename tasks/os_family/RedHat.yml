@@ -1,0 +1,10 @@
+---
+
+- name: install postfix
+  yum:
+    name:
+      - postfix
+      - cyrus-sasl-plain
+      - cyrus-sasl-md5
+    state: present
+  when: ansible_os_family == 'RedHat'
