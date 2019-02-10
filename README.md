@@ -14,7 +14,7 @@
 
 # ansible-role-postfix
 
-An [Ansible](https://www.ansible.com) role to install/configure [Postfix])
+An [Ansible](https://www.ansible.com) role to install/configure [Postfix]
 
 ## Build Status
 
