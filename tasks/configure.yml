@@ -16,7 +16,7 @@
     dest: /etc/postfix/sasl_passwd
     mode: 0600
   when:
-    - postfix_use_sasl_passwd_file == "True"
+    - postfix_use_sasl_passwd_file|bool == True
   notify:
     - postmap sasl_passwd
     - enable postfix
