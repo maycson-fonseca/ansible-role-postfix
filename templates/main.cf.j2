@@ -7,6 +7,10 @@ alias_database = {{ postfix_alias_database }}
 alias_maps = {{ postfix_alias_maps }}
 {% endif %}
 
+{% if postfix_inet_interfaces is defined %}
+inet_interfaces = {{ postfix_inet_interfaces }}
+{% endif %}
+
 {% if postfix_header_size_limit is defined %}
 header_size_limit = {{ postfix_header_size_limit }}
 {% endif %}
