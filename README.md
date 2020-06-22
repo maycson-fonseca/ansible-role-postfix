@@ -38,6 +38,7 @@ BSD
 
 ## Author Information
 
-Maycson Fonseca
+Original author: Maycson Fonseca
 
 - [maycson.fonseca@gmail.com](mailto:maycson.fonseca@gmail.com)
+- <https://github.com/maycson-fonseca/>
