@@ -24,6 +24,8 @@ An [Ansible](https://www.ansible.com) role to install/configure [Postfix]
 
 [Role Defaults](./defaults/main.yml)
 
+- postfix_inet_interfaces: <string> # Specify interface to bind
+
 ## Dependencies
 
 None
