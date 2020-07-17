@@ -33,6 +33,7 @@ recipient_delimiter = {{ postfix_recipient_delimiter }}
 relayhost = {{ postfix_relayhost }}
 {% endif %}
 
+{% if postfix_smtpd_use_tls|bool is sameas true %}
 {% if postfix_smtpd_tls_auth_only is defined %}
 smtpd_tls_auth_only = {{ postfix_smtpd_tls_auth_only }}
 {% endif %}
@@ -64,7 +65,8 @@ smtpd_tls_security_level = {{ postfix_smtpd_tls_security_level }}
 smtpd_tls_session_cache_timeout = {{ postfix_smtpd_tls_session_cache_timeout }}
 {% endif %}
 {% if postfix_smtpd_use_tls is defined %}
-smtpd_use_tls = {{ postfix_smtpd_use_tls }}
+smtpd_use_tls = yes
+{% endif %}
 {% endif %}
 
 {% if postfix_smtp_sasl_auth_enable is defined %}
