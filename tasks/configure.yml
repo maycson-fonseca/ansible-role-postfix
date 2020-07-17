@@ -1,23 +1,26 @@
 ---
 
-- name: add main.cf file
-  template:
-    src: main.cf.j2
-    dest: /etc/postfix/main.cf
-
-- name: add mailname file
-  template:
-    src: mailname.j2
-    dest: /etc/mailname
-
-- name: create sasl_passwd file
-  template:
-    src: sasl_passwd.j2
-    dest: /etc/postfix/sasl_passwd
-    mode: 0600
-  when:
-    - postfix_use_sasl_passwd_file == "True"
-  notify:
-    - postmap sasl_passwd
-    - enable postfix
-    - restart postfix
+  - name: add main.cf file
+    template:
+      src: main.cf.j2
+      dest: /etc/postfix/main.cf
+    notify:
+      - reload postfix
+  
+  - name: add mailname file
+    template:
+      src: mailname.j2
+      dest: /etc/mailname
+  
+  - name: create sasl_passwd file
+    template:
+      src: sasl_passwd.j2
+      dest: /etc/postfix/sasl_passwd
+      mode: 0600
+    when:
+      - postfix_use_sasl_passwd_file|bool == True
+    notify:
+      - postmap sasl_passwd
+      - enable postfix
+      - restart postfix
+  
